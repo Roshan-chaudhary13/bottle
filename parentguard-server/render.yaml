@@ -1,0 +1,12 @@
+# Render free tier: one web service, Docker runtime.
+# Render auto-detects this file when you connect the repo.
+# No credit card needed for the free plan.
+services:
+  - type: web
+    name: parentguard-server
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
